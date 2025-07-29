@@ -1,0 +1,54 @@
+---
+import LandingLayout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Reach New Clients',
+};
+---
+
+<LandingLayout metadata={metadata}>
+  <Fragment>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  </Fragment>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Attention: Coaches, Consultants, & Experts"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Free Workshop Session',
+        href: '#',
+        // target: '_blank',
+        onclick:
+          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
+        icon: 'tabler:presentation',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Fill your calendar with <span class="text-accent dark:text-white highlight">high-paying clients</span> in the next
+      90 days</Fragment
+    >
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Without chasing cold leads, burning ad money, or juggling complex funnels.</span>
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="0lg9Z0j6SPM" title="What is The RED Method?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+</LandingLayout>
