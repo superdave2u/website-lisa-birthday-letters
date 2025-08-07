@@ -1,31 +1,31 @@
 site:
-  name: The RED Method
-  site: 'https://redrhino.online'
+  name: Lisa's Birthday Surprise
+  site: 'https://surprise.lisamainville.com'
   base: '/'
-  trailingSlash: true
+  trailingSlash: false
 
   googleSiteVerificationId: XXXXXXXXXXXXXXXXXXXXXXXX
 
 # Default SEO metadata
 metadata:
   title:
-    default: The RED Method
-    template: '%s — The RED Method'
-  description: "\U0001F680 Fill your calendar with high-paying clients in the next 90 days without chasing cold leads, burning ad money, or juggling complex funnels."
+    default: Lisa's Birthday Surprise
+    template: "%s — Lisa's Birthday Surprise"
+  description: "\U0001F680 You're Invited to Be Part of Something Lisa Will Never Never Forget"
   robots:
-    index: true
-    follow: true
-  openGraph:
-    site_name: The RED Method
-    images:
-      - url: '~/assets/images/client-journey.png'
-        width: 1050
-        height: 600
+    index: false
+    follow: false
+    # openGraph:
+    # site_name: Lisa's Birthday Surprise
+    # images:
+    #   - url: '~/assets/images/client-journey.png'
+    #     width: 1050
+    #     height: 600
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+  # twitter:
+  #   handle: '@onwidget'
+  #   site: '@onwidget'
+  #   cardType: summary_large_image
 
 i18n:
   language: en
