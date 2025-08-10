@@ -15,13 +15,13 @@ metadata:
   robots:
     index: false
     follow: false
-    # openGraph:
-    # site_name: Lisa's Birthday Surprise
-    # images:
-    #   - url: '~/assets/images/client-journey.png'
-    #     width: 1050
-    #     height: 600
-    type: website
+    openGraph:
+      site_name: Lisa's Birthday Surprise
+      images:
+        - url: '~/assets/images/PORTRAIT.jpg'
+          width: 1080
+          height: 1440
+      type: website
   # twitter:
   #   handle: '@onwidget'
   #   site: '@onwidget'
