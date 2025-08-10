@@ -2,33 +2,25 @@
 import LandingLayout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
 
 import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Reach New Clients',
+  title: 'Attention: Friends and Loved Ones',
 };
 ---
 
 <LandingLayout metadata={metadata}>
-  <Fragment>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  </Fragment>
-  <!-- Hero Widget ******************* -->
-
   <Hero
     tagline="Attention: Friends and Loved Ones"
     actions={[
       {
         variant: 'primary',
-        text: 'Upload Your Letter to Lisa',
-        href: '#',
-        // target: '_blank',
-        onclick:
-          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
-        icon: 'tabler:presentation',
+        text: 'Record Your Video Now',
+        href: 'https://testimonial.to/',
+        target: '_blank',
+        icon: 'tabler:microphone-2',
       },
     ]}
   >
@@ -39,17 +31,60 @@ const metadata = {
     >
 
     <Fragment slot="subtitle">
-      For her birthday, we’re creating a surprise <span class="font-semibold">that speaks to her soul</span>
+      A special surprise <span class="font-semibold">that speaks to her soul</span>
     </Fragment>
 
-    <Fragment slot="image">
-      <YouTube id="#####" title="Lisa's Suprise Letters" />
+    <!-- <Fragment slot="image">
+      <YouTube id="#####" title="Lisa's Surprise Letters" />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
           max-width: 100%;
         }
       </style>
-    </Fragment>
+    </Fragment> -->
   </Hero>
+  <Content
+    title="A Gift She’ll Treasure Forever"
+    subtitle="Your words have the power to touch her heart in a way nothing else can"
+    tagline="Acknowlege Her With Words that Matter"
+    image={{
+      src: '~/assets/images/PORTRAIT.jpg',
+      alt: 'Our Beautiful Lisa',
+    }}
+    items={[
+      {
+        icon: 'tabler:heart',
+        title: `Lisa’s primary love language is words of affirmation`,
+        description:
+          'Lisa cherishes hearing about who she is at her core. Too often, we focus on what a person does and forget to acknowledge the values, principles, and character that make them truly special.',
+      },
+      {
+        icon: 'tabler:movie',
+        title: `This year, I'm creating a surprise video montage for Lisa’s birthday`,
+        description: `A celebration of her heart, her spirit, and the way she impacts the lives of those around her. Help me create a collection of heartfelt messages from the people who know her best.`,
+      },
+      {
+        icon: 'tabler:speakerphone',
+        title: 'I need your voice in this',
+        description: `Record a short video (about three minutes) sharing the qualities you admire most about Lisa. Tell her what you see in her. Remind her of the light she carries. Your words will become part of a gift that she can return to again and again.`,
+      },
+      {
+        icon: 'tabler:calendar-exclamation',
+        title: `The Deadline Is Soon!`,
+        description: `Let’s make her birthday unforgettable together. This will be one of those gifts that stays in her heart forever`,
+      },
+    ]}
+  />
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Record Your Video Now',
+        href: 'https://testimonial.to/',
+        target: '_blank',
+        icon: 'tabler:microphone-2',
+      },
+    ]}
+  />
 </LandingLayout>
