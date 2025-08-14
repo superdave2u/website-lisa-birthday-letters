@@ -3,6 +3,7 @@ import LandingLayout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
+import Proof from '~/components/widgets/Proof.astro';
 
 import { YouTube } from 'astro-embed';
 
@@ -25,16 +26,17 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      You're Invited to Be Part of Something <span class="text-accent dark:text-white highlight"
-        >Lisa Will Never Forget</span
+      We're giving Lisa a <span class="text-accent dark:text-white highlight">message she'll carry forever</span
       ></Fragment
     >
 
     <Fragment slot="subtitle">
-      A special surprise <span class="font-semibold">that speaks to her soul</span>
-    </Fragment>
+      One that says, “I see you. I know you. <span class="font-semibold"></span>You matter.</Fragment
+    ></Hero
+  >
+</LandingLayout>
 
-    <!-- <Fragment slot="image">
+<!-- <Fragment slot="image">
       <YouTube id="#####" title="Lisa's Surprise Letters" />
       <style is:inline>
         lite-youtube {
@@ -43,48 +45,100 @@ const metadata = {
         }
       </style>
     </Fragment> -->
-  </Hero>
-  <Content
-    title="Words that Matter"
-    subtitle="Your words have the power to touch her heart in a way nothing else can"
-    tagline="A Gift She’ll Treasure Forever"
-    image={{
-      src: '~/assets/images/PORTRAIT.jpg',
-      alt: 'Our Beautiful Lisa',
-    }}
-    items={[
-      {
-        icon: 'tabler:heart',
-        title: `Lisa’s love language is words of affirmation`,
-        description:
-          'Lisa cherishes hearing that people see her and how she has an impact. Too often, we focus on what a person does and forget to acknowledge the values, principles, and character that make them truly special.',
+
+<Content
+  tagline="Most of us never get to hear the full impact we have"
+  title="This is our moment to give Lisa what most people never receive"
+  subtitle="Imagine Lisa watching a video filled with the voices of the people she loves, tears welling up as she hears how deeply she’s impacted each of us..."
+  image={{
+    src: '~/assets/images/PORTRAIT.jpg',
+    alt: 'Our Beautiful Lisa',
+  }}
+  items={[
+    {
+      icon: 'tabler:heart',
+      title: `Words are her oxygen`,
+      description:
+        'Lisa’s love language is words of affirmation but she rarely gets to hear the deep stuff. Not just what she does, but the heart behind it. The values. The impact. The real stories.',
+    },
+    {
+      icon: 'tabler:movie',
+      title: `This year, I'm creating a surprise video montage for Lisa’s birthday`,
+      description: `A celebration of her heart, her spirit, and the way she impacts the lives of those around her.<br><br>Help me create a collection of heartfelt messages from the people who know her best.`,
+    },
+    {
+      icon: 'tabler:speakerphone',
+      title: 'That’s where you come in',
+      description: `Record a short (under 3 minutes) video sharing how Lisa impacted your life.<br><br>Not generic compliments, real moments:<br> – The time she helped you see something differently.<br> – What ways she has inspired you.<br> – The way her presence shifts a room.`,
+    },
+    {
+      icon: 'tabler:speakerphone',
+      title: 'Here’s what to do:',
+      description: `On the next page you'll be able to record a short video with your phone.<br><br>Share the qualities you most admire in Lisa. Go beyond what she does; speak to who she is. Tell her the moments that stuck with you. The things she doesn’t hear enough. The impact she’s had.<br><br>Some inspiration:<br>&nbsp;– “Lisa, I’ll never forget the time you…”<br>&nbsp;– “You probably don’t realize how much it meant when…”<br>&nbsp;– “Because of you, I now…”`,
+    },
+    {
+      icon: 'tabler:calendar-exclamation',
+      title: `Deadline is coming fast don’t wait!`,
+      description: `This is the kind of gift she keeps for life. Let’s make her birthday unforgettable together.`,
+    },
+  ]}
+/>
+<Hero
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Record a Message Now',
+      href: 'https://testimonial.to/words-for-lisa-s-soul',
+      target: '_blank',
+      icon: 'tabler:microphone-2',
+    },
+  ]}
+/>
+<Proof
+  title="You’re in Great Company"
+  subtitle="Others are already sharing their love for Lisa. Add your voice to the celebration!"
+  testimonials={[
+    {
+      image: {
+        src: '~/assets/images/people/brooke.jpg',
+        alt: 'Brooke',
       },
-      {
-        icon: 'tabler:movie',
-        title: `This year, I'm creating a surprise video montage for Lisa’s birthday`,
-        description: `A celebration of her heart, her spirit, and the way she impacts the lives of those around her. Help me create a collection of heartfelt messages from the people who know her best.`,
+    },
+    {
+      image: {
+        src: '~/assets/images/people/carter.jpg',
+        alt: 'Carter',
       },
-      {
-        icon: 'tabler:speakerphone',
-        title: 'I need your voice in this',
-        description: `Record a short video (about three minutes) sharing the qualities you admire most about Lisa. Tell her what you see in her. Remind her of the light she carries. Your words will become part of a gift that she can return to again and again.`,
+    },
+    {
+      image: {
+        src: '~/assets/images/people/jodi.jpg',
+        alt: 'Jodi',
       },
-      {
-        icon: 'tabler:calendar-exclamation',
-        title: `The Deadline Is Soon!`,
-        description: `Let’s make her birthday unforgettable together. This will be one of those gifts that stays in her heart forever`,
+    },
+    {
+      image: {
+        src: '~/assets/images/people/mark.jpg',
+        alt: 'Mark',
       },
-    ]}
-  />
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Record a Message Now',
-        href: 'https://testimonial.to/words-for-lisa-s-soul',
-        target: '_blank',
-        icon: 'tabler:microphone-2',
+    },
+    {
+      image: {
+        src: '~/assets/images/people/michael.jpg',
+        alt: 'michael',
       },
-    ]}
-  />
-</LandingLayout>
+    },
+  ]}
+/>
+<Hero
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Record a Message Now',
+      href: 'https://testimonial.to/words-for-lisa-s-soul',
+      target: '_blank',
+      icon: 'tabler:microphone-2',
+    },
+  ]}
+/>
+<br><br><br>&nbsp;
