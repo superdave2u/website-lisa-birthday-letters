@@ -11,7 +11,7 @@ metadata:
   title:
     default: Lisa's Birthday Surprise
     template: "%s — Lisa's Birthday Surprise"
-  description: "\U0001F680 You're Invited to Be Part of Something Lisa Will Never Never Forget"
+  description: "\U0001F680 You're Invited to Be Part of Something Lisa Will Never Forget"
   robots:
     index: false
     follow: false
